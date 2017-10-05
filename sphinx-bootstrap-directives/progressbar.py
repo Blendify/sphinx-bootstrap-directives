@@ -30,14 +30,14 @@ class progressbar(nodes.General, nodes.Element):
 def visit_progressbar_node(self, node):
     width = node["width"]
 
-    self.body.append(self.starttag(node, "div", class="progress"))
+    self.body.append(self.starttag(node, "div", CLASS="progress"))
     style = {
         "width": "%d%s" % width,
     }
     attrs = {
         "style": css(style),
     }
-    self.body.append(self.starttag(node, "div", class="progress-bar", **attrs))
+    self.body.append(self.starttag(node, "div", CLASS="progress-bar", **attrs))
     self.body.append("</div></div>")
 
 
@@ -51,7 +51,7 @@ def nop_node(self, node):
 
 class ProgressBar(Directive):
     has_content = True
-    required_arguments = 1
+    required_arguments = 0
     optional_arguments = 0
     final_argument_whitespace = False
     option_spec = {
@@ -62,7 +62,6 @@ class ProgressBar(Directive):
         width = get_size(self.options, "width")
         return [
             progressbar(
-                id=self.arguments[0],
                 width=width,
                 )
             ]
@@ -75,7 +74,7 @@ def setup(app):
             latex=(nop_node, nop_node),
             text=(nop_node, nop_node),
             )
-    app.add_directive("progressbar.", ProgressBar)
+    app.add_directive("progressbar", ProgressBar)
     return {
         "parallel_read_safe": True,
     }
