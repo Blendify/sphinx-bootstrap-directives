@@ -31,9 +31,11 @@ sys.path.insert(0, os.path.abspath(os.path.join('../..', 'sphinx-bootstrap-direc
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc',
+extensions = [
+    'sphinx.ext.autodoc',
     'sphinx.ext.coverage',
-    'progressbar']
+    'progressbar'
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -57,7 +59,7 @@ author = u'Aaron Carlisle'
 # built documents.
 #
 # The short X.Y version.
-version = u''
+version = u'0.0.1'
 # The full version, including alpha/beta/rc tags.
 release = u'0.0.1'
 
@@ -85,13 +87,18 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'basicstrap'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'header_inverse': False,
+    'relbar_inverse': False,
+    'inner_theme': True,
+    'inner_theme_name': 'bootswatch-flatly',
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -101,17 +108,7 @@ html_static_path = ['_static']
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
-# This is required for the alabaster theme
-# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-        'donate.html',
-    ]
-}
+html_sidebars = {}
 
 
 # -- Options for HTMLHelp output ------------------------------------------
