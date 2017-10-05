@@ -20,3 +20,4 @@ Indices and tables
 * :ref:`search`
 
 .. progressbar::
+   :width: 50%
