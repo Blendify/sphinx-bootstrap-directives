@@ -7,9 +7,7 @@ from docutils.parsers.rst import Directive
 
 def setup(app):
     app.add_node(progressbar,
-                 html=(visit_progressbar_node, depart_progressbar_node),
-                 latex=(visit_progressbar_node, depart_progressbar_node),
-                 text=(visit_progressbar_node, depart_progressbar_node))
+                 html=(visit_progressbar_node, depart_progressbar_node))
 
     app.add_directive('progressbar', ProgressbarDirective)
 
