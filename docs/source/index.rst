@@ -3,13 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Sphinx Bootstap Directives's documentation!
-======================================================
+******************************************
+Sphinx Bootstap Directives's documentation
+******************************************
+
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Directives:
 
+   progressbars.rst
 
 
 Indices and tables
@@ -18,6 +21,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-.. progressbar::
-   :width: 50%
