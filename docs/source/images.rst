@@ -1,3 +1,4 @@
+
 ******
 Images
 ******
@@ -12,4 +13,51 @@ to `.. image::` or `.. figure::` directives. Supported options are:
 - `img-thumbnail`
 - `img-responsive`
 
-  .. note:: This will not work if you set the height or the width of the image.
+Rounded Corners
+===============
+
+.. code:: rst
+
+   .. figure:: https://www.w3schools.com/w3images/lights.jpg
+      :class: img-rounded
+
+.. figure:: https://www.w3schools.com/w3images/lights.jpg
+   :class: img-rounded
+
+
+Circle
+======
+
+.. code:: rst
+
+   .. figure:: https://www.w3schools.com/w3images/lights.jpg
+      :class: img-circle
+
+.. figure:: https://www.w3schools.com/w3images/lights.jpg
+   :class: img-circle
+
+
+Thumbnails
+==========
+
+.. code:: rst
+
+   .. figure:: https://www.w3schools.com/w3images/lights.jpg
+      :class: img-thumbnail
+
+.. figure:: https://www.w3schools.com/w3images/lights.jpg
+   :class: img-thumbnail
+
+
+Responsive Images
+=================
+
+.. note:: This will not work if you set the `:height:` or the `:width:` of the image.
+  
+.. code:: rst
+
+   .. figure:: https://www.w3schools.com/w3images/lights.jpg
+      :class: img-responsive
+
+.. figure:: https://www.w3schools.com/w3images/lights.jpg
+   :class: img-responsive
