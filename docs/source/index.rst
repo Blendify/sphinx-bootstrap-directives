@@ -12,6 +12,7 @@ Sphinx Bootstap Directives's documentation
    :maxdepth: 2
    :caption: Directives:
 
+   images.rst
    progressbars.rst
 
 
